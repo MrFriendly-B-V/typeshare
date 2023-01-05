@@ -225,6 +225,7 @@ impl TryFrom<&syn::Type> for RustType {
                     "i64" => RustType::Special(SpecialRustType::I64),
                     "u64" => RustType::Special(SpecialRustType::U64),
                     "usize" | "isize" => {
+                        println!("Bla");
                         return Err(RustTypeParseError::UnsupportedType(vec![id]))
                     }
                     "i8" => RustType::Special(SpecialRustType::I8),
