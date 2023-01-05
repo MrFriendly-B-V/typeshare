@@ -49,11 +49,11 @@ impl Language for TypeScript {
             | SpecialRustType::I54
             | SpecialRustType::U53
             | SpecialRustType::F32
+            | SpecialRustType::I64
+            | SpecialRustType::U64
             | SpecialRustType::F64 => Ok("number".into()),
             SpecialRustType::Bool => Ok("boolean".into()),
-            SpecialRustType::U64
-            | SpecialRustType::I64
-            | SpecialRustType::ISize
+            SpecialRustType::ISize
             | SpecialRustType::USize => {
                 panic!("64 bit types not allowed in Typeshare")
             }
